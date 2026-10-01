@@ -69,7 +69,7 @@ const siteConfig = {
       featured: false,
       description: 'Hackathon project built under time pressure. Rapid prototyping and creative problem-solving under constraints — the kind of build where you learn the most in the shortest time.',
       tech: ['JavaScript', 'Python', 'API'],
-      github: '',
+      github: 'https://github.com/Xandriel-2005/Veilex',
       live: '',
     },
     {
@@ -79,7 +79,7 @@ const siteConfig = {
       featured: false,
       description: 'Currently in active development. A project that\'s evolving as I learn — details coming soon. Watch this space.',
       tech: ['TBD'],
-      github: '',
+      github: 'https://github.com/Xandriel-2005/LifeQuest',
       live: '',
     },
     {
@@ -90,7 +90,7 @@ const siteConfig = {
       description: 'First-year project — a full event booking platform built with hand-written PHP. No frameworks, no shortcuts. Where it all started. Raw code, maximum learning.',
       tech: ['PHP', 'MySQL', 'HTML/CSS', 'JavaScript'],
       github: 'https://github.com/Xandriel-2005/EventBookingSystem',
-      live: '',
+      live: 'https://bookvnts-eventbooking.infy.uk/',
     },
   ],
 
