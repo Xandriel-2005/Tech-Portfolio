@@ -102,8 +102,8 @@ const siteConfig = {
       items: [
         { name: 'Python', level: 90 },
         { name: 'JavaScript / TypeScript', level: 75 },
-        { name: 'C++', level: 70 },
-        { name: 'Java', level: 65 },
+        { name: 'C++', level: 90 },
+        { name: 'Java', level: 70 },
         { name: 'HTML / CSS', level: 80 },
       ],
     },
@@ -140,7 +140,7 @@ const siteConfig = {
     {
       role: 'B.Tech Computer Science',
       company: 'SKIT, Jaipur',
-      date: '2024 – Present',
+      date: '2024 - Present',
       description: 'Pursuing Computer Science with a focus on machine learning and systems engineering. Active in hackathons and building side projects to apply classroom theory to real-world problems.',
       tags: ['DSA', 'OS', 'DBMS', 'ML'],
     },
@@ -168,7 +168,7 @@ const siteConfig = {
   // ── Footer ─────────────────────────────
   footer: {
     credit: 'Designed & built by Chirag Gupta',
-    tagline: '© 2026 · Made with obsidian & emerald',
+    tagline: '© 2026',
   },
 };
 
