@@ -132,9 +132,9 @@ const siteConfig = {
   experience: [
     {
       role: 'MLOps Engineering Intern',
-      company: 'Summer Internship',
-      date: 'Summer 2026',
-      description: 'Worked on production MLOps pipelines — building infrastructure for training, tracking, and deploying computer vision models. Gained hands-on experience with Airflow orchestration, MLflow experiment tracking, and model serving in production environments.',
+      company: 'Binomial Technologies Pvt. Ltd., Jaipur',
+      date: 'Summer 2026 · 45 days',
+      description: 'Completed a 45-day summer internship at Binomial Technologies Pvt. Ltd., Jaipur. Worked on production MLOps pipelines — building infrastructure for training, tracking, and deploying computer vision models. Gained hands-on experience with Airflow orchestration, MLflow experiment tracking, and model serving in production environments.',
       tags: ['MLOps', 'Airflow', 'MLflow', 'Python', 'Docker'],
     },
     {
