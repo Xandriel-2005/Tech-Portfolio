@@ -37,7 +37,7 @@ const siteConfig = {
       status: 'deployed',      // 'deployed' | 'active' | 'building' | 'hackathon' | 'archived' | 'private'
       date: 'Jul 2026',
       featured: true,
-      description: 'Self-service, adapter-based MLOps platform for training, tracking, and running inference on computer vision object-detection models. Built on Airflow, MLflow, and a pluggable BaseDetector interface so new architectures (YOLO, Hugging Face, custom) drop in without touching the pipeline.',
+      description: 'Built after my internship at Binomial Technologies, applying everything I learned on the job. A self-service, adapter-based MLOps platform for training, tracking, and running inference on computer vision object-detection models. Built on Airflow, MLflow, and a pluggable BaseDetector interface so new architectures (YOLO, Hugging Face, custom) drop in without touching the pipeline.',
       tech: ['Python', 'Airflow', 'MLflow', 'YOLO', 'HuggingFace', 'Docker'],
       github: 'https://github.com/Xandriel-2005/VisionOps',
       live: '',  // Add live demo link if available
@@ -83,13 +83,13 @@ const siteConfig = {
       live: '',
     },
     {
-      name: 'EventBookingSystem',
+      name: 'Bookvnts',
       status: 'archived',
       date: 'Jul 2025',
       featured: false,
-      description: 'First-year project — a full event booking platform built with hand-written PHP. No frameworks, no shortcuts. Where it all started. Raw code, maximum learning.',
+      description: 'Built after a 15-day in-house internship at Kistechno Software, Jaipur, applying the skills they taught. A full event booking platform built with hand-written PHP. No frameworks, no shortcuts. Where it all started. Raw code, maximum learning.',
       tech: ['PHP', 'MySQL', 'HTML/CSS', 'JavaScript'],
-      github: 'https://github.com/Xandriel-2005/EventBookingSystem',
+      github: 'https://github.com/Xandriel-2005/Bookvnts',
       live: 'https://bookvnts-eventbooking.infy.uk/',
     },
   ],
@@ -136,6 +136,13 @@ const siteConfig = {
       date: 'Summer 2026 · 45 days',
       description: 'Completed a 45-day summer internship at Binomial Technologies Pvt. Ltd., Jaipur. Worked on production MLOps pipelines — building infrastructure for training, tracking, and deploying computer vision models. Gained hands-on experience with Airflow orchestration, MLflow experiment tracking, and model serving in production environments.',
       tags: ['MLOps', 'Airflow', 'MLflow', 'Python', 'Docker'],
+    },
+    {
+      role: 'Web Development Intern',
+      company: 'KIS Techno Software, Jaipur',
+      date: 'Summer 2025 · 15 days',
+      description: 'Completed a 15-day in-house internship after first year. Learned full-stack web development fundamentals which I then applied to build BookVNTS — a complete event booking platform from scratch using PHP, MySQL, and vanilla JavaScript.',
+      tags: ['PHP', 'MySQL', 'HTML/CSS', 'JavaScript'],
     },
     {
       role: 'B.Tech Computer Science',
