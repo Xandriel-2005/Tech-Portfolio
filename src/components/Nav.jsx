@@ -53,7 +53,7 @@ export default function Nav({ config }) {
           {/* Desktop Contact Button */}
           <div className="hidden md:block">
             <a 
-              href={`mailto:${personal.email}`}
+              href="#contact"
               className="inline-flex items-center justify-center bg-accent-blue text-surface font-mono text-[11px] font-semibold tracking-[0.2em] uppercase px-6 py-3 rounded-pill shadow-[0_4px_14px_rgba(36,122,154,0.3)] hover:bg-accent-blue-dark transition-all duration-300"
             >
               CONTACT
@@ -83,7 +83,8 @@ export default function Nav({ config }) {
           </div>
           <div className="border-t border-border pt-4">
             <a 
-              href={`mailto:${personal.email}`}
+              href="#contact"
+              onClick={() => setMenuOpen(false)}
               className="flex items-center justify-center w-full bg-accent-blue text-surface font-mono text-[12px] font-semibold tracking-[0.2em] uppercase px-6 py-3.5 rounded-pill shadow-[0_4px_14px_rgba(36,122,154,0.3)]"
             >
               CONTACT
