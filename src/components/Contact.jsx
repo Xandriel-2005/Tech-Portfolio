@@ -7,7 +7,7 @@ export default function Contact({ config }) {
   return (
     <section id="contact" className="section-reveal py-16 md:py-24 px-6 md:px-8 max-w-[1380px] mx-auto" ref={sectionRef}>
       
-      <div className="relative bg-surface border border-border rounded-[32px] p-8 md:p-16 shadow-soft overflow-hidden">
+      <div className="relative bg-surface border border-border rounded-[32px] p-6 md:p-16 shadow-soft overflow-hidden">
         {/* Decorative ambient background */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-accent-lavender rounded-full blur-[80px] opacity-60 -z-10 pointer-events-none translate-x-1/3 -translate-y-1/3" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent-blue/10 rounded-full blur-[80px] opacity-60 -z-10 pointer-events-none -translate-x-1/3 translate-y-1/3" />
@@ -16,19 +16,19 @@ export default function Contact({ config }) {
           
           {/* Left: Text */}
           <div className="max-w-xl">
-            <span className="block font-mono text-[12px] font-semibold tracking-[0.2em] uppercase text-accent-blue mb-4">
+            <span className="block font-mono text-[11px] md:text-[12px] font-semibold tracking-[0.2em] uppercase text-accent-blue mb-4">
               OPEN FOR OPPORTUNITIES
             </span>
-            <h2 className="font-sans font-bold text-[40px] md:text-[56px] text-text-primary tracking-tight leading-[1.05] mb-6">
+            <h2 className="font-sans font-bold text-[32px] sm:text-[40px] md:text-[56px] text-text-primary tracking-tight leading-[1.05] mb-6">
               Let's build something better.
             </h2>
-            <p className="font-sans text-[17px] md:text-[19px] leading-relaxed text-text-secondary">
+            <p className="font-sans text-[16px] md:text-[19px] leading-relaxed text-text-secondary">
               I'm always open to discussing new projects, internship opportunities, or just having a good technical conversation. My inbox is open.
             </p>
           </div>
 
           {/* Right: Actions */}
-          <div className="flex flex-col gap-4 w-full md:w-auto shrink-0 min-w-[280px]">
+          <div className="flex flex-col gap-4 w-full md:w-auto shrink-0 md:min-w-[280px]">
             <a 
               href={`mailto:${personal.email}`}
               className="flex items-center justify-center gap-3 w-full bg-accent-blue text-surface font-sans text-[14px] font-bold tracking-[0.05em] uppercase px-8 py-5 rounded-[18px] shadow-[0_8px_20px_rgba(36,122,154,0.25)] hover:bg-accent-blue-dark hover:shadow-[0_12px_24px_rgba(36,122,154,0.3)] hover:-translate-y-1 transition-all duration-300"

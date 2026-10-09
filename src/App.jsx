@@ -32,7 +32,7 @@ export default function App() {
   }
 
   return (
-    <div className="bg-background text-text-primary min-h-screen font-sans selection:bg-accent-blue selection:text-surface">
+    <div className="bg-background text-text-primary min-h-screen font-sans selection:bg-accent-blue selection:text-surface overflow-x-hidden w-full">
       <Nav config={config} />
       <Hero config={config} />
       <About config={config} />

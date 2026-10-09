@@ -27,8 +27,8 @@ export default function Nav({ config }) {
             href="#hero"
             className="flex items-center gap-3 group"
           >
-            <img src="/logo.png" alt="CG Logo" className="w-10 h-10 object-contain" />
-            <div className="flex flex-col leading-[1.1] font-sans font-bold tracking-tight text-[1.1rem]">
+            <img src="/logo.png" alt="CG Logo" className="w-8 h-8 md:w-10 md:h-10 object-contain" />
+            <div className="flex flex-col leading-[1.1] font-sans font-bold tracking-tight text-[0.95rem] md:text-[1.1rem]">
               <span className="text-text-primary uppercase group-hover:text-accent-blue transition-colors">{personal.firstName}</span>
               <span className="text-accent-blue uppercase group-hover:text-text-primary transition-colors">{personal.lastName}</span>
             </div>
