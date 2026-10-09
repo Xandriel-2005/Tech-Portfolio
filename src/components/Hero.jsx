@@ -1,147 +1,102 @@
-import { useEffect, useRef, useState, useCallback } from 'react'
+import Logo from './Logo'
 
 export default function Hero({ config }) {
-  const { personal, terminal } = config
-  const [typed, setTyped] = useState('')
-  const [showOutput, setShowOutput] = useState(false)
-  const [cursorVisible, setCursorVisible] = useState(true)
-  const canvasRef = useRef(null)
-  const animRef = useRef(null)
-
-  // ── Typing effect ──
-  useEffect(() => {
-    const cmd = terminal.command
-    let i = 0
-    const timer = setInterval(() => {
-      if (i < cmd.length) {
-        setTyped(cmd.slice(0, i + 1))
-        i++
-      } else {
-        clearInterval(timer)
-        setTimeout(() => {
-          setCursorVisible(false)
-          setShowOutput(true)
-        }, 400)
-      }
-    }, 70)
-    return () => clearInterval(timer)
-  }, [terminal.command])
-
-  // ── Particle canvas ──
-  const initParticles = useCallback(() => {
-    const canvas = canvasRef.current
-    if (!canvas) return
-    const ctx = canvas.getContext('2d')
-    let particles = []
-
-    const resize = () => {
-      canvas.width = canvas.parentElement.offsetWidth
-      canvas.height = canvas.parentElement.offsetHeight
-    }
-
-    const create = () => {
-      particles = []
-      const count = Math.min(Math.floor(canvas.width / 15), 80)
-      for (let i = 0; i < count; i++) {
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.3,
-          vy: (Math.random() - 0.5) * 0.3,
-          size: Math.random() * 1.5 + 0.5,
-          opacity: Math.random() * 0.4 + 0.1,
-        })
-      }
-    }
-
-    const draw = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
-      particles.forEach((p, i) => {
-        p.x += p.vx; p.y += p.vy
-        if (p.x < 0) p.x = canvas.width
-        if (p.x > canvas.width) p.x = 0
-        if (p.y < 0) p.y = canvas.height
-        if (p.y > canvas.height) p.y = 0
-
-        ctx.beginPath()
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(16,185,129,${p.opacity})`
-        ctx.fill()
-
-        for (let j = i + 1; j < particles.length; j++) {
-          const p2 = particles[j]
-          const dist = Math.hypot(p.x - p2.x, p.y - p2.y)
-          if (dist < 120) {
-            ctx.beginPath()
-            ctx.moveTo(p.x, p.y)
-            ctx.lineTo(p2.x, p2.y)
-            ctx.strokeStyle = `rgba(16,185,129,${0.06 * (1 - dist / 120)})`
-            ctx.lineWidth = 0.5
-            ctx.stroke()
-          }
-        }
-      })
-      animRef.current = requestAnimationFrame(draw)
-    }
-
-    resize()
-    create()
-    draw()
-
-    const onResize = () => { resize(); create() }
-    window.addEventListener('resize', onResize)
-    return () => {
-      cancelAnimationFrame(animRef.current)
-      window.removeEventListener('resize', onResize)
-    }
-  }, [])
-
-  useEffect(() => {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (!prefersReducedMotion) {
-      const cleanup = initParticles()
-      return cleanup
-    }
-  }, [initParticles])
+  const { personal } = config
 
   return (
-    <section id="hero" className="hero">
-      <div className="hero__terminal">
-        <div className="terminal__bar">
-          <span className="terminal__dot terminal__dot--red" />
-          <span className="terminal__dot terminal__dot--yellow" />
-          <span className="terminal__dot terminal__dot--green" />
-          <span className="terminal__bar-title">{terminal.user}@{terminal.host}:~</span>
+    <section id="hero" className="relative pt-[140px] md:pt-[180px] pb-16 md:pb-24 px-6 md:px-8 max-w-[1380px] mx-auto min-h-[90vh] flex flex-col justify-center">
+      {/* Background ambient lighting */}
+      <div className="absolute top-0 right-[10%] w-[600px] h-[600px] bg-accent-lavender/40 rounded-full blur-[100px] -z-10 pointer-events-none" />
+      <div className="absolute bottom-0 left-[5%] w-[500px] h-[500px] bg-surface-muted rounded-full blur-[80px] -z-10 pointer-events-none" />
+
+      <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center">
+        {/* Left: Text Content */}
+        <div className="flex flex-col items-start z-10">
+          {/* Eyebrow */}
+          <div className="font-mono text-[11px] md:text-[12px] font-semibold tracking-[0.25em] uppercase text-accent-blue mb-6">
+            {personal.eyebrow}
+          </div>
+
+          {/* Headline */}
+          <h1 className="font-sans font-bold text-text-primary leading-[1.05] tracking-[-0.03em] mb-6 md:mb-8 text-[44px] md:text-[64px] lg:text-[76px]">
+            <span className="block">{personal.headline[0]}</span>
+            <span className="block">
+              {personal.headline[1].includes(personal.headlineHighlight) ? (
+                <>
+                  <span>{personal.headline[1].split(personal.headlineHighlight)[0]}</span>
+                  <span className="text-accent-blue">{personal.headlineHighlight}</span>
+                  <span>{personal.headline[1].split(personal.headlineHighlight)[1]}</span>
+                </>
+              ) : (
+                <span>{personal.headline[1]}</span>
+              )}
+            </span>
+            <span className="block">{personal.headline[2]}</span>
+          </h1>
+
+          {/* Description */}
+          <p className="font-sans text-[17px] md:text-[19px] leading-relaxed text-text-secondary max-w-[580px] mb-10">
+            {personal.bio}
+          </p>
+
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row items-center gap-4 mb-12 w-full sm:w-auto">
+            <a
+              href="#skills"
+              className="w-full sm:w-auto text-center bg-accent-blue text-surface font-sans text-[13px] font-semibold tracking-[0.05em] uppercase px-8 py-4 rounded-pill shadow-[0_8px_20px_rgba(36,122,154,0.25)] hover:bg-accent-blue-dark hover:shadow-[0_12px_24px_rgba(36,122,154,0.3)] hover:-translate-y-0.5 transition-all duration-300"
+            >
+              EXPLORE SKILLS
+            </a>
+            {personal.resumeLink && (
+              <a
+                href={personal.resumeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto text-center bg-surface-muted text-accent-blue-dark font-sans text-[13px] font-semibold tracking-[0.05em] uppercase px-8 py-4 rounded-pill border border-border shadow-sm hover:bg-white hover:border-accent-blue/30 transition-all duration-300"
+              >
+                DOWNLOAD RESUME
+              </a>
+            )}
+          </div>
+
+          {/* Availability Badge */}
+          <div className="inline-flex items-center gap-3 bg-[#EEF2F6] border border-[#D5E1EA] px-5 py-2.5 rounded-pill">
+            <span className="relative flex w-2 h-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-blue opacity-75"></span>
+              <span className="relative inline-flex rounded-full w-2 h-2 bg-accent-blue"></span>
+            </span>
+            <span className="font-mono text-[11px] font-bold tracking-[0.2em] uppercase text-accent-blue">
+              {personal.availability}
+            </span>
+          </div>
         </div>
-        <div className="terminal__body">
-          <div className="terminal__line">
-            <span className="terminal__path">{terminal.path}</span>
-            <span className="terminal__branch">({terminal.branch})</span>
-            <span className="terminal__prompt">$</span>
-            <span className="terminal__command">{typed}</span>
-            {cursorVisible && <span className="terminal__cursor">█</span>}
-          </div>
-          <div className={`terminal__output${showOutput ? ' visible' : ''}`}>
-            <div className="hero__intro">
-              <p className="hero__greeting">Hey, I'm</p>
-              <h1 className="hero__name">{personal.name}</h1>
-              <p className="hero__tagline">{personal.tagline}</p>
-              <p className="hero__sub">{personal.roles.join(' · ')}</p>
+
+        {/* Right: Portrait Panel */}
+        <div className="relative w-full max-w-[500px] mx-auto lg:mx-0 lg:ml-auto mt-8 lg:mt-0">
+          <div className="bg-surface rounded-[28px] p-2 md:p-3 border border-border shadow-soft relative z-10 group">
+            {/* Inner image container */}
+            <div className="bg-surface-muted rounded-[20px] overflow-hidden relative aspect-[4/5] w-full flex items-center justify-center border border-border">
+              {/* Massive background blur of the logo */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-10">
+                <img src="/logo.png" alt="" className="w-full h-full object-cover scale-150 blur-xl" />
+              </div>
+              <div className="relative z-10 drop-shadow-[0_0_30px_rgba(0,102,255,0.3)]">
+                <img src="/logo.png" alt="CG Logo" className="w-48 h-48 md:w-72 md:h-72 object-contain" />
+              </div>
             </div>
-            <div className="hero__actions">
-              <a href="#projects" className="btn btn--primary">
-                <span className="btn__glyph">$</span> view_projects
-              </a>
-              <a href="#contact" className="btn btn--ghost">
-                <span className="btn__glyph">&gt;</span> get_in_touch
-              </a>
+
+            {/* Caption Panel */}
+            <div className="absolute -left-4 -bottom-4 md:left-6 md:-bottom-6 bg-surface-muted border border-border rounded-[14px] px-5 py-3 shadow-md">
+              <span className="font-mono text-[11px] font-bold tracking-[0.15em] text-accent-blue-dark">
+                {personal.photoCaption}
+              </span>
             </div>
           </div>
+
+          {/* Decorative background element behind portrait */}
+          <div className="absolute -top-10 -right-10 w-full h-full border-2 border-surface-muted rounded-[28px] -z-10" />
         </div>
       </div>
-
-      <div className="hero__grid" aria-hidden="true" />
-      <canvas ref={canvasRef} className="hero__particles" aria-hidden="true" />
     </section>
   )
 }

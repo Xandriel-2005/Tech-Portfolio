@@ -6,176 +6,114 @@ const siteConfig = {
 
   // ── Personal Info ──────────────────────
   personal: {
+    firstName: 'CHIRAG',
+    lastName: 'GUPTA',
     name: 'Chirag Gupta',
-    tagline: 'I build systems that see, learn, and ship.',
-    bio: [
-      'I\'m a 20-year-old Computer Science student from <strong>Kota, Rajasthan</strong>, currently studying at <strong>SKIT, Jaipur</strong>. I\'m driven by a deep curiosity for how things work under the hood — from the pixel-level operations in computer vision to the orchestration layers that get models from notebook to production.',
-      'My recent internship solidified my passion for <strong>MLOps</strong> — building the infrastructure that takes machine learning from experiment to deployment. I worked on production pipelines, learned to wrangle Airflow DAGs, and got my hands dirty with model tracking in MLflow.',
-      'When I\'m not writing code, I\'m usually exploring new tools, breaking things to understand them, or reading about system design patterns. I believe the best way to learn is to build — and ship.',
-    ],
-    roles: ['CS Undergrad @ SKIT Jaipur', 'Computer Vision', 'MLOps', 'Full-Stack'],
+    eyebrow: 'COMPUTER SCIENCE & ENGINEERING / FULL-STACK / ML',
+    headline: ['I design', 'the systems behind', 'better ideas.'],
+    headlineHighlight: 'systems',
+    bio: "I'm Chirag, a CSE student turning ambitious ideas into fast, useful interfaces and intelligent systems.",
+    availability: 'AVAILABLE FOR INTERNSHIPS',
     email: 'cgupta814@gmail.com',
     github: 'https://github.com/Xandriel-2005',
-    githubHandle: 'Xandriel-2005',
-    linkedin: 'https://linkedin.com/in/',  // TODO: Add your LinkedIn URL
-    // twitter: 'https://twitter.com/yourhandle',  // Uncomment & fill when ready
-    resumeLink: '',  // TODO: Add your resume PDF link
+    linkedin: 'https://linkedin.com/in/chirag-gupta-535a82326',
+    resumeLink: '#resume', // Now points to the dedicated resume page
+    photoCaption: 'IDENTITY / 01'
   },
-
-  // ── Stats shown in About section ──────
-  stats: [
-    { value: 5, label: 'projects built', isCounter: true },
-    { value: 8, label: 'technologies', isCounter: true },
-    { value: '2027', label: 'expected grad', isCounter: false },
-    { value: '●', label: 'open to work', isCounter: false, isStatus: true },
-  ],
 
   // ── Projects ───────────────────────────
   projects: [
     {
       name: 'VisionOps',
-      status: 'deployed',      // 'deployed' | 'active' | 'building' | 'hackathon' | 'archived' | 'private'
-      date: 'Jul 2026',
-      featured: true,
-      description: 'Built after my internship at Binomial Technologies, applying everything I learned on the job. A self-service, adapter-based MLOps platform for training, tracking, and running inference on computer vision object-detection models. Built on Airflow, MLflow, and a pluggable BaseDetector interface so new architectures (YOLO, Hugging Face, custom) drop in without touching the pipeline.',
-      tech: ['Python', 'Airflow', 'MLflow', 'YOLO', 'HuggingFace', 'Docker'],
+      category: 'AI SYSTEM',
+      metric: 'PRODUCTION',
+      description: 'A self-service, adapter-based MLOps platform for training, tracking, and running inference on computer vision models.',
       github: 'https://github.com/Xandriel-2005/VisionOps',
-      live: '',  // Add live demo link if available
-    },
-    {
-      name: 'TerraVision',
-      status: 'active',
-      date: 'Sep 2026',
-      featured: false,
-      description: 'Geospatial computer vision project exploring terrain analysis and satellite imagery processing. Combines remote sensing data with deep learning models for environmental monitoring and land classification.',
-      tech: ['Python', 'Computer Vision', 'GIS'],
-      github: 'https://github.com/Xandriel-2005/TerraVision',
-      live: '',
+      live: ''
     },
     {
       name: 'BFC-IMS',
-      status: 'private',
-      date: '2026',
-      featured: false,
-      description: 'Inventory Management System built for real-world business operations. Handles stock tracking, order management, and reporting with a clean interface designed for non-technical users.',
-      tech: ['React', 'Node.js', 'SQL'],
+      category: 'FULL-STACK',
+      metric: 'LIVE CLIENT',
+      description: 'A full-stack inventory management system enabling non-technical staff to seamlessly manage daily orders, vendors, and inventory.',
       github: '',
-      live: '',
+      live: ''
     },
     {
-      name: 'Veilex',
-      status: 'hackathon',
-      date: '2026',
-      featured: false,
-      description: 'Hackathon project built under time pressure. Rapid prototyping and creative problem-solving under constraints — the kind of build where you learn the most in the shortest time.',
-      tech: ['JavaScript', 'Python', 'API'],
-      github: 'https://github.com/Xandriel-2005/Veilex',
-      live: '',
-    },
-    {
-      name: 'LifeQuest',
-      status: 'building',
-      date: '2026 · ongoing',
-      featured: false,
-      description: 'Currently in active development. A project that\'s evolving as I learn — details coming soon. Watch this space.',
-      tech: ['TBD'],
-      github: 'https://github.com/Xandriel-2005/LifeQuest',
-      live: '',
+      name: 'TerraVision',
+      category: 'DATA TOOL',
+      metric: 'ACTIVE R&D',
+      description: 'Geospatial computer vision for terrain analysis and satellite imagery processing using deep learning models.',
+      github: 'https://github.com/Xandriel-2005/TerraVision',
+      live: ''
     },
     {
       name: 'Bookvnts',
-      status: 'archived',
-      date: 'Jul 2025',
-      featured: false,
-      description: 'Built after a 15-day in-house internship at Kistechno Software, Jaipur, applying the skills they taught. A full event booking platform built with hand-written PHP. No frameworks, no shortcuts. Where it all started. Raw code, maximum learning.',
-      tech: ['PHP', 'MySQL', 'HTML/CSS', 'JavaScript'],
+      category: 'WEB PLATFORM',
+      metric: 'DEPLOYED',
+      description: 'A complete event booking platform built from scratch with secure user sessions and real-time form validation.',
       github: 'https://github.com/Xandriel-2005/Bookvnts',
-      live: 'https://bookvnts-eventbooking.infy.uk/',
+      live: 'https://bookvnts-eventbooking.infy.uk/'
+    },
+    {
+      name: 'LifeQuest',
+      category: 'FULL-STACK',
+      metric: 'IN DEVELOPMENT',
+      description: 'Currently in active development. A project that\'s evolving as I learn — details coming soon. Watch this space.',
+      github: 'https://github.com/Xandriel-2005/LifeQuest',
+      live: ''
     },
   ],
 
-  // ── Skills ─────────────────────────────
-  // level: 0-100 (controls the bar fill width)
-  skills: [
-    {
-      category: 'Languages',
-      items: [
-        { name: 'Python', level: 90 },
-        { name: 'JavaScript / TypeScript', level: 75 },
-        { name: 'C++', level: 90 },
-        { name: 'Java', level: 70 },
-        { name: 'HTML / CSS', level: 80 },
-      ],
-    },
-    {
-      category: 'Frameworks & Tools',
-      items: [
-        { name: 'React', level: 72 },
-        { name: 'Node.js', level: 65 },
-        { name: 'Git / Linux', level: 75 },
-        { name: 'Docker', level: 55 },
-        { name: 'SQL / Databases', level: 70 },
-      ],
-    },
-    {
-      category: 'ML / AI',
-      items: [
-        { name: 'Computer Vision', level: 75 },
-        { name: 'MLOps (Airflow, MLflow)', level: 70 },
-        { name: 'Deep Learning', level: 60 },
-        { name: 'YOLO / HuggingFace', level: 65 },
-      ],
-    },
-  ],
-
-  // ── Experience / Timeline ──────────────
+  // ── Experience ─────────────────────────
   experience: [
     {
       role: 'MLOps Engineering Intern',
-      company: 'Binomial Technologies Pvt. Ltd., Jaipur',
-      date: 'Summer 2026 · 45 days',
-      description: 'Completed a 45-day summer internship at Binomial Technologies Pvt. Ltd., Jaipur. Worked on production MLOps pipelines — building infrastructure for training, tracking, and deploying computer vision models. Gained hands-on experience with Airflow orchestration, MLflow experiment tracking, and model serving in production environments.',
-      tags: ['MLOps', 'Airflow', 'MLflow', 'Python', 'Docker'],
+      company: 'Binomial Technologies Pvt. Ltd.',
+      location: 'Jaipur, Rajasthan',
+      date: 'Summer 2026',
+      description: 'Built production MLOps pipelines for training and deploying CV models. Orchestrated ML workflows using Apache Airflow and MLflow. Containerised inference services with Docker.',
     },
     {
-      role: 'Web Development Intern',
-      company: 'KIS Techno Software, Jaipur',
-      date: 'Summer 2025 · 15 days',
-      description: 'Completed a 15-day in-house internship after first year. Learned full-stack web development fundamentals which I then applied to build BookVNTS — a complete event booking platform from scratch using PHP, MySQL, and vanilla JavaScript.',
-      tags: ['PHP', 'MySQL', 'HTML/CSS', 'JavaScript'],
+      role: 'Web Development Intern (In-House)',
+      company: 'KISTECHNO Software',
+      location: 'Jaipur, Rajasthan',
+      date: 'Summer 2025',
+      description: 'Built responsive front-end interfaces using HTML, CSS, JavaScript, and PHP. Integrated dynamic backend logic and delivered functional prototypes aligned with industry standards.',
     },
     {
-      role: 'B.Tech Computer Science',
-      company: 'SKIT, Jaipur',
-      date: '2024 - Present',
-      description: 'Pursuing Computer Science with a focus on machine learning and systems engineering. Active in hackathons and building side projects to apply classroom theory to real-world problems.',
-      tags: ['DSA', 'OS', 'DBMS', 'ML'],
+      role: 'B.Tech in Computer Science',
+      company: 'SKIT, Management & Gramothan',
+      location: 'Jaipur, Rajasthan',
+      date: '2024 - 2028',
+      description: 'Pursuing Bachelor of Technology in Computer Science. Building foundational knowledge in data structures, algorithms, and software engineering.',
     },
   ],
 
-  // ── Blog Posts (add when you start writing) ──
-  // blogPosts: [
-  //   {
-  //     title: 'Building VisionOps: Lessons in MLOps Architecture',
-  //     date: 'Oct 2026',
-  //     excerpt: 'What I learned about adapter patterns...',
-  //     link: '/blog/visionops-lessons',
-  //   },
-  // ],
-
-  // ── Terminal hero config ───────────────
-  terminal: {
-    user: 'chirag',
-    host: 'portfolio',
-    path: '~/portfolio',
-    branch: 'main',
-    command: 'cat about_me.md',
-  },
+  // ── Skills & Exploration ───────────────
+  skills: [
+    {
+      category: 'Languages',
+      items: ['PYTHON', 'C++', 'JAVASCRIPT/TYPESCRIPT', 'JAVA', 'PHP', 'SQL']
+    },
+    {
+      category: 'Frameworks',
+      items: ['REACT', 'NODE.JS', 'TAILWIND', 'BOOTSTRAP']
+    },
+    {
+      category: 'ML & AI',
+      items: ['COMPUTER VISION', 'DEEP LEARNING', 'YOLO', 'HUGGINGFACE']
+    },
+    {
+      category: 'Infrastructure',
+      items: ['DOCKER', 'AIRFLOW', 'MLFLOW', 'LINUX']
+    }
+  ],
 
   // ── Footer ─────────────────────────────
   footer: {
-    credit: 'Designed & built by Chirag Gupta',
-    tagline: '© 2026',
+    name: 'CHIRAG GUPTA',
+    tagline: 'BUILT WITH CURIOSITY.',
   },
 };
 

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chirag Gupta - Resume</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 10.5pt;
+            line-height: 1.15;
+            color: #000;
+            background: #fff;
+            padding: 20px;
+        }
+
+        .page {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 24pt;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        .contact {
+            font-size: 10pt;
+        }
+
+        .contact a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .sep {
+            margin: 0 4px;
+        }
+
+        section {
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 11pt;
+            font-weight: normal;
+            text-transform: uppercase;
+            border-bottom: 1px solid #000;
+            margin-bottom: 4px;
+            padding-bottom: 2px;
+            letter-spacing: 0.05em;
+        }
+
+        .entry {
+            margin-bottom: 5px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .title {
+            font-weight: bold;
+        }
+
+        .sub {
+            font-style: italic;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        .right-italic {
+            text-align: right;
+            font-style: italic;
+        }
+
+        .tech {
+            font-style: italic;
+        }
+
+        ul {
+            padding-left: 18px;
+            margin-top: 2px;
+        }
+
+        li {
+            margin-bottom: 1px;
+        }
+
+        .skills {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .skills-row {
+            display: flex;
+        }
+
+        .skills-row .skill-category {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+            }
+
+            .page {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page">
+        <header>
+            <h1>Chirag Gupta</h1>
+            <p class="contact">
+                +91 7597747647 <span class="sep">|</span>
+                <a href="mailto:cgupta814@gmail.com">cgupta814@gmail.com</a> <span class="sep">|</span>
+                <a href="https://linkedin.com/in/chirag-gupta-535a82326" target="_blank"
+                    rel="noopener">linkedin.com/in/chirag-gupta-535a82326</a> <span class="sep">|</span>
+                <a href="https://github.com/Xandriel-2005" target="_blank" rel="noopener">github.com/Xandriel-2005</a>
+            </p>
+        </header>
+
+        <section>
+            <h2>Education</h2>
+            <div class="entry">
+                <div class="row">
+                    <span class="title">Swami Keshvanand Institute of Technology, Management &amp; Gramothan</span>
+                    <span class="right">Jaipur, Rajasthan</span>
+                </div>
+                <div class="row">
+                    <span class="sub">Pursuing - Bachelor of Technology in Computer Science</span>
+                    <span class="right-italic">2024 - 2028</span>
+                </div>
+            </div>
+            <div class="entry" style="display: flex; justify-content: space-between; gap: 20px;">
+                <div style="flex: 1; border-right: 1px solid #ccc; padding-right: 20px;">
+                    <div class="row">
+                        <span class="title">Modi Public School Kota</span>
+                        <span class="right">Kota, Rajasthan</span>
+                    </div>
+                    <div class="row">
+                        <span class="sub">Class 12 (PCM) - 70%</span>
+                        <span class="right-italic">2023 - 2024</span>
+                    </div>
+                </div>
+                <div style="flex: 1;">
+                    <div class="row">
+                        <span class="title">Modern School Kota</span>
+                        <span class="right">Kota, Rajasthan</span>
+                    </div>
+                    <div class="row">
+                        <span class="sub">Class 10 - 83%</span>
+                        <span class="right-italic"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <div class="entry">
+                <div class="row">
+                    <span class="title">MLOps Engineering Intern</span>
+                    <span class="right">Summer 2026</span>
+                </div>
+                <div class="row">
+                    <span class="sub">Binomial Technologies Pvt. Ltd.</span>
+                    <span class="right-italic">Jaipur, Rajasthan</span>
+                </div>
+                <ul>
+                    <li>Built production MLOps pipelines for training, tracking, and deploying computer vision models
+                    </li>
+                    <li>Orchestrated end-to-end ML workflows using Apache Airflow DAGs with automated retraining
+                        triggers</li>
+                    <li>Integrated MLflow for experiment tracking, model versioning, and artifact management across
+                        environments</li>
+                    <li>Containerised inference services with Docker for reproducible, scalable model serving</li>
+                    <li>Applied learnings post-internship to build VisionOps-an open-source, adapter-based MLOps
+                        platform</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <div class="row">
+                    <span class="title">Web Development Intern (In-House)</span>
+                    <span class="right">Summer 2025</span>
+                </div>
+                <div class="row">
+                    <span class="sub">KISTECHNO Software</span>
+                    <span class="right-italic">Jaipur, Rajasthan</span>
+                </div>
+                <ul>
+                    <li>Built responsive front-end interfaces using HTML, CSS, JavaScript, and PHP with modular
+                        components</li>
+                    <li>Integrated dynamic backend logic and implemented real-time form validation</li>
+                    <li>Collaborated with peers to simulate client requirements and delivered functional prototypes
+                        aligned with industry standards</li>
+                    <li>Applied learnings post-internship to build Bookvnts - a full event booking platform, live at
+                        <a href="https://bookvnts-eventbooking.infy.uk"> Bookvnts </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <div class="entry">
+                <div class="row">
+                    <span><span class="title">VisionOps</span> | <span class="tech">Python, Airflow, MLflow, YOLO,
+                            HuggingFace, Docker</span></span>
+                    <span class="right">Jul 2026</span>
+                </div>
+                <ul>
+                    <li>Architected a self-service, adapter-based platform for training, tracking, and running inference
+                        on object-detection models</li>
+                    <li>Designed a pluggable BaseDetector interface allowing new architectures (YOLO, Hugging Face,
+                        custom) to integrate without modifying the core pipeline</li>
+                    <li>Implemented orchestration with Airflow and MLflow, containerising all services with Docker for
+                        scalable deployment</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <div class="row">
+                    <span><span class="title">Bhumika Floral Creations - IMS</span> | <span class="tech">React, Node.js,
+                            SQL</span></span>
+                    <span class="right">2026</span>
+                </div>
+                <ul>
+                    <li>Developed a full-stack inventory management system for a floral decor startup to track stock of
+                        real and artificial plants</li>
+                    <li>Designed a React dashboard enabling non-technical staff to seamlessly manage daily
+                        orders, vendors, and inventory categories</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <div class="row">
+                    <span><span class="title">TerraVision (Prototype)</span> | <span class="tech">Python, Computer
+                            Vision, GIS</span></span>
+                    <span class="right">Sep 2026</span>
+                </div>
+                <ul>
+                    <li>Exploring terrain analysis and satellite imagery processing using deep learning models</li>
+                    <li>Combining remote sensing data with computer vision for environmental monitoring and land
+                        classification</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <div class="row">
+                    <span><span class="title">Bookvnts</span> | <span class="tech">PHP, MySQL, HTML, CSS,
+                            JavaScript</span></span>
+                    <span class="right">Jul 2025</span>
+                </div>
+                <ul>
+                    <li>Designed and deployed a full-stack, responsive event booking platform</li>
+                    <li>Implemented a complete booking flow, encrypted credential storage, and secure user sessions</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <div class="skills-row">
+                    <div class="skill-category">Languages:</div>
+                    <div>Python, C++, JavaScript / TypeScript, Java, PHP, HTML/CSS, SQL</div>
+                </div>
+                <div class="skills-row">
+                    <div class="skill-category">Frameworks / Libraries:</div>
+                    <div>React, Node.js, YOLO, HuggingFace Transformers, Bootstrap-5, TailwindCSS, shadCN UI</div>
+                </div>
+                <div class="skills-row">
+                    <div class="skill-category">ML / AI:</div>
+                    <div>Computer Vision, Deep Learning, MLOps, Experiment Tracking, Model Serving</div>
+                </div>
+                <div class="skills-row">
+                    <div class="skill-category">Infrastructure &amp; Tools:</div>
+                    <div>Docker, Apache Airflow, MLflow, Git, Linux, VS Code, Jenkins</div>
+                </div>
+                <div class="skills-row">
+                    <div class="skill-category">Data &amp; BI Tools:</div>
+                    <div>Power BI, Tableau, MySQL, PostgreSQL</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Certifications &amp; Hackathons</h2>
+            <div class="entry">
+                <div class="row">
+                    <span class="title">HackIndia Spark-12</span>
+                    <span class="right">PIET</span>
+                </div>
+                <div class="row">
+                    <span class="sub">Participant - 36-Hour National Hackathon</span>
+                    <span class="right-italic"></span>
+                </div>
+                <ul>
+                    <li>Competed in a 36-hour hackathon building a working prototype under intense time constraints</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="row">
+                    <span class="title">NPTEL Certifications</span>
+                    <span class="right">IITs/IISc</span>
+                </div>
+                <div class="row">
+                    <span class="sub">Programming in C, Programming in Java</span>
+                    <span class="right-italic"></span>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="row">
+                    <span class="title">Oracle Certification</span>
+                    <span class="right">Oracle Academy</span>
+                </div>
+                <div class="row">
+                    <span class="sub">Database Management System (DBMS)</span>
+                    <span class="right-italic"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
